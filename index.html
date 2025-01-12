@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hexo 博客搭建指南</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1, h2, h3 {
+            color: #4CAF50;
+        }
+        ul {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+        }
+        li {
+            margin-bottom: 0.5rem;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 2rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hexo 博客搭建指南</h1>
+    </header>
+    <main>
+        <h2>前置准备</h2>
+        <ul>
+            <li>安装 <code>Node.js</code> (推荐版本 16 或以上)</li>
+            <li>安装 <code>Git</code></li>
+            <li>确保已注册 GitHub 或 Gitee 账号</li>
+        </ul>
+        
+        <h2>安装 Hexo</h2>
+        <ol>
+            <li>打开终端，安装 Hexo：<br><code>npm install -g hexo-cli</code></li>
+            <li>创建博客文件夹并初始化：<br><code>hexo init my-blog</code></li>
+            <li>进入目录并安装依赖：<br><code>cd my-blog && npm install</code></li>
+        </ol>
+        
+        <h2>运行本地服务</h2>
+        <ul>
+            <li>生成静态文件：<br><code>hexo generate</code> 或 <code>hexo g</code></li>
+            <li>启动本地服务器：<br><code>hexo server</code> 或 <code>hexo s</code></li>
+            <li>访问：<a href="http://localhost:4000" target="_blank">http://localhost:4000</a></li>
+        </ul>
+        
+        <h2>部署到 GitHub Pages</h2>
+        <ol>
+            <li>安装部署工具：<br><code>npm install hexo-deployer-git --save</code></li>
+            <li>修改配置文件 <code>_config.yml</code>，添加以下内容：
+                <pre><code>deploy:
+  type: git
+  repo: https://github.com/your-username/your-repo.git
+  branch: gh-pages</code></pre>
+            </li>
+            <li>执行部署命令：<br><code>hexo deploy</code> 或 <code>hexo d</code></li>
+        </ol>
+        
+        <h2>常见问题</h2>
+        <ul>
+            <li><strong>部署失败：</strong>确保 GitHub 仓库权限正确。</li>
+            <li><strong>本地无法运行：</strong>检查 <code>node_modules</code> 是否完整安装。</li>
+        </ul>
+    </main>
+    <footer>
+        <p>&copy; 2025 Hexo Guide</p>
+    </footer>
+</body>
+</html>
